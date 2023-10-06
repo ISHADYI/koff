@@ -7,7 +7,7 @@
 
   @media (min-width: 780px) {
     padding-top: 40px;
-  }
+  } 
 
   &__container {
     display: grid;
@@ -16,7 +16,10 @@
     @media (min-width: 880px) {
       grid-template-columns: 1fr 302px;
       gap: 40px 30px;
-      grid-template-areas: "title ." "content place" "form form";
+      grid-template-areas:
+      "title ."
+      "content place" 
+      "form form";
       justify-content: space-between;
     }
 
