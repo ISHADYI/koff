@@ -1,0 +1,22 @@
+.goods {
+	padding-top: 24px;
+}
+.goods__title {
+}
+.goods__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 49px 8px;
+	@media (min-width: 580px) {
+		grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+		gap: 65px 10px;
+	}
+	@media (min-width: 820px) {
+		grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+		gap: 81px 16px;
+	}
+}
+.goods__item {
+}
+.goods__card {
+}

@@ -1,0 +1,16 @@
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.table__row {
+	border-bottom: 1px solid #EEEFF2;
+}
+.table__field {
+	padding: 8px 0px;
+	color: #969EAE;
+}
+.table__value {
+	padding: 8px 0px;
+	text-align: right;
+}
+// Для справки, стили к таблице делала я сама, т.к таблица используется в ордере, поэтому не смотрела готовые стили к таблице
