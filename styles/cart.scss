@@ -205,6 +205,9 @@
     border: 1px solid transparent;
     background-color: #780096;
     color: #fff;
+    &:hover {
+      background-color: #9200b7;
+    }
   }
 
   &__form {

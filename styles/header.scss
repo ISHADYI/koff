@@ -82,9 +82,8 @@
 .header__link {
 	display: flex;
 	flex-direction: row-reverse;
-	// align-items: center;
 	gap: 4px;
-	align-items: end;
+	// align-items: end;
 	transition: color .2s ease-in-out;
 
 	&:focus,
