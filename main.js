@@ -4,6 +4,7 @@ import Navigo from 'navigo';
 import { Header } from './modules/Header/Header';
 import { Main } from './modules/Main/Main';
 import { Footer } from './modules/Footer/Footer';
+import { Order } from './modules/Order/Order';
 //==================SWIPER==================
 const productSlider = () => {
   Promise.all([

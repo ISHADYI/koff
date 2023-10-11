@@ -25,11 +25,11 @@ export class Order {
 
 		const orderHeaderTitle = document.createElement("h3")
 		orderHeaderTitle.classList.add("order__title")
-		orderHeaderTitle.textContent("Заказ успешно размещен")
+		orderHeaderTitle.textContent = "Заказ успешно размещен";
 
 		const orderPrice = document.createElement("p");
 		orderPrice.classList.add("order__price")
-		orderPrice.textContent = `20&nbsp;000&nbsp;₽`;
+		orderPrice.textContent = `${Number(20000)} ₽`;
 
 		orderHeader.append(orderHeaderTitle, orderPrice)
 
@@ -37,7 +37,20 @@ export class Order {
 		orderNumber.classList.add("order__number")
 		orderNumber.textContent = `№${Number(43435)}`
 
-		this.containerElement.append(orderHeader, orderNumber, getOrderData());
+		const orderData = document.createElement("div");
+		orderData.classList.add("order__data")
+
+		const orderTitle = document.createElement("h4");
+		orderTitle.classList.add("order__data-title");
+		orderTitle.textContent = "Данные доставки";
+
+		const orderBtn = document.createElement("button");
+		orderBtn.classList.add("order__button", "button");
+		orderBtn.textContent = "На главную";
+		orderBtn.type = "button"
+
+		orderData.insertAdjacentHTML('beforeend', this.getOrderTable())
+		this.containerElement.append(orderHeader, orderNumber,orderTitle, orderData, orderBtn);
 
 		parent.append(this.element);
 		this.isMounted = true;
@@ -46,22 +59,6 @@ export class Order {
 	unmount() {
 		this.element.remove();
 		this.isMounted = false;
-	}
-
-	getOrderData() {
-		const orderData = document.createElement("div");
-		orderData.classList.add("order__data")
-
-		const orderTitle = document.createElement("h4");
-		orderTitle.classList.add("order__data-title");
-		orderTitle.textContent("Данные доставки");
-
-		const orderBtn = document.createElement("button");
-		orderBtn.classList.add("order__button", "button");
-		orderBtn.textContent = "На главную";
-		orderBtn.type = "button"
-
-		orderData.append(orderTitle, getOrderTable(), orderBtn)
 	}
 
 	getOrderTable() {
